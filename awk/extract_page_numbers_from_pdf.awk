@@ -15,7 +15,9 @@ BEGIN {
       # printf "%s %s %s\n", NR, list[k], k
 
     # printf "=== page: %s, search bookmark %d: %s\n", NR, k, list[k]
+    # mnogotochie
     if (match($0, "(^|\n|Chapter | |\xe2\x80\xa6)"escape(list[k])"(\n|\xe2\x80\xa6| )") > 0) {
+      sub(/\xe2\x80\x94/, "-", list[k]) # long dash
       hash[list[k]] = NR
       last = k
       # printf "= found page: %s <== bookmark %d: %s\n", NR, k, list[k]
@@ -27,7 +29,10 @@ BEGIN {
 
 END {
   for (k in list) {
+  if (test=="test")
     printf "%-3s|%s|\n", hash[list[k]], list[k]
+  else
+    printf "%s|%s\n", list[k], hash[list[k]]
   }
 }
 

@@ -1,21 +1,26 @@
 #!/bin/bash -i
 
+function main() {
+  [ "$1" == "gen" ] && gen_test_data
+  [ "$1" == "rename" ] && rename_test_result_files
 
-[ -z $1 ] && for f in $(ls -1 test/*.in | sort -V)
-do
-  out="${f/.in/\.out}"
-  actual="${out/.out/_actual.out}"
-  ./main.sh "$f" > "$actual"
-  diff -N "$actual" "$out" > /dev/null && {
-    echo_green "$f" ok;
-    rm "$actual"
-  } || {
-    echo_red "$f" failed;
-  }
-done
+  [ -z $1 ] &&
+  for f in $(ls -1 test/*.in | sort -V)
+  do
+    out="${f/.in/\.out}"
+    actual="${out/.out/_actual.out}"
+    ./main.sh "$f" test > "$actual"
+    diff -N "$actual" "$out" > /dev/null && {
+      echo_green "$f" ok;
+      rm "$actual"
+    } || {
+      echo_red "$f" failed;
+    }
+  done
+}
 
 function gen_test_data() {
-  input="../Linden - Expert C Programming,1994.pdf"
+  input="../Linden - Expert C Programming, 1994.pdf"
   mkdir -p test/1/
   for i in $(seq 290 290) 
   do
@@ -23,7 +28,6 @@ function gen_test_data() {
   done
 }
 
-[ "$1" == "gen" ] && gen_test_data
 
 function rename_test_result_files() {
   str=""
@@ -40,4 +44,6 @@ function rename_test_result_files() {
   eval "$str"
   unset str expected f
 }
-[ "$1" == "rename" ] && rename_test_result_files
+
+main "$@"
+
