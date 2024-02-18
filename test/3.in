@@ -1,0 +1,28 @@
+Expert C Programming: Deep C Secrets
+By Peter van der Linden
+Introduction
+C code. C code run. Run code run…please!
+—Barbara Ling
+All C programs do the same thing: look at a character and do nothing with it.
+—Peter Weinberger
+Have you ever noticed that there are plenty of C books with suggestive names like C Traps and Pitfalls, or The C Puzzle Book, or Obfuscated C and Other Mysteries, but other programming languages don't have books like that? There's a very good reason for this!
+C programming is a craft that takes years to perfect. A reasonably sharp person can learn the basics of C quite quickly. But it takes much longer to master the nuances of the language and to write enough programs, and enough different programs, to become an expert. In natural language terms, this is the difference between being able to order a cup of coffee in Paris, and (on the Metro) being able to tell a native Parisienne where to get off. This book is an advanced text on the ANSI C programming language. It is intended for people who are already writing C programs, and who want to quickly pick up some of the insights and techniques of experts.
+Expert programmers build up a tool kit of techniques over the years; a grab-bag of idioms, code fragments, and deft skills. These are acquired slowly over time, learned from looking over the shoulders of more experienced colleagues, either directly or while maintaining code written by others. Other lessons in C are self-taught. Almost every beginning C programmer independently rediscovers the mistake of writing:
+if (i=3)
+instead of:
+if (i==3)
+Once experienced, this painful error (doing an assignment where comparison was intended) is rarely
+repeated. Some programmers have developed the habit of writing the literal first, like this: if (3==i). Then, if an equal sign is accidentally left out, the compiler will complain about an
+"attempted assignment to literal." This won't protect you when comparing two variables, but every little bit helps.
+
+The $20 Million Bug
+In Spring 1993, in the Operating System development group at SunSoft, we had a "priority one" bug report come in describing a problem in the asynchronous I/O library. The bug was holding up the sale of $20 million worth of hardware to a customer who specifically needed the library functionality, so we were extremely motivated to find it. After some intensive debugging sessions, the problem was finally traced to a statement that read :
+x==2;
+It was a typo for what was intended to be an assignment statement. The programmer 's finger had bounced on the "equals" key, accidentally pressing it twice instead of once. The statement as written compared x to 2, generated true or false, and discarded the result .
+C is enough of an expression language that the compiler did not complain about a statement which evaluated an expression, had no side-effects, and simply threw away the result. We didn't know whether to bless our good fortune at locating the problem, or cry with frustration at such a common typing error causing such an expensive problem. Some versions of the lint program would have detected this problem, but it's all too easy to avoid the automatic use of this essential tool.
+This book gathers together many other salutary stories. It records the wisdom of many experienced programmers, to save the reader from having to rediscover everything independently. It acts as a guide for territory that, while broadly familiar, still has some unexplored corners. There are extended discussions of major topics like declarations and arrays/pointers, along with a great many hints and mnemonics. The terminology of ANSI C is used throughout, along with translations into ordinary English where needed.
+Programming Challenge
+OR
+Handy Heuristic
+
+
