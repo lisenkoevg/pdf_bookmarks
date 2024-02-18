@@ -1,18 +1,0 @@
-Expert C Programming: Deep C Secrets
-By Peter van der Linden
-Introduction
-C code. C code run. Run code run…please!
-—Barbara Ling
-All C programs do the same thing: look at a character and do nothing with it.
-—Peter Weinberger
-Have you ever noticed that there are plenty of C books with suggestive names like C Traps and Pitfalls, or The C Puzzle Book, or Obfuscated C and Other Mysteries, but other programming languages don't have books like that? There's a very good reason for this!
-C programming is a craft that takes years to perfect. A reasonably sharp person can learn the basics of C quite quickly. But it takes much longer to master the nuances of the language and to write enough programs, and enough different programs, to become an expert. In natural language terms, this is the difference between being able to order a cup of coffee in Paris, and (on the Metro) being able to tell a native Parisienne where to get off. This book is an advanced text on the ANSI C programming language. It is intended for people who are already writing C programs, and who want to quickly pick up some of the insights and techniques of experts.
-Expert programmers build up a tool kit of techniques over the years; a grab-bag of idioms, code fragments, and deft skills. These are acquired slowly over time, learned from looking over the shoulders of more experienced colleagues, either directly or while maintaining code written by others. Other lessons in C are self-taught. Almost every beginning C programmer independently rediscovers the mistake of writing:
-if (i=3)
-instead of:
-if (i==3)
-Once experienced, this painful error (doing an assignment where comparison was intended) is rarely
-repeated. Some programmers have developed the habit of writing the literal first, like this: if (3==i). Then, if an equal sign is accidentally left out, the compiler will complain about an
-"attempted assignment to literal." This won't protect you when comparing two variables, but every little bit helps.
-
-

@@ -1,0 +1,136 @@
+2  |Introduction|
+3  |The $20 Million Bug|
+4  |Convention|
+4  |Some Light Relief—Tuning File Systems|
+7  |1. C Through the Mists of Time|
+7  |The Prehistory of C|
+10 |Early Experiences with C|
+11 |The Standard I/O Library and C Preprocessor|
+14 |K&R C|
+16 |The Present Day: ANSI C|
+18 |It's Nice, but Is It Standard?|
+20 |Translation Limits|
+21 |The Structure of the ANSI C Standard|
+25 |Reading the ANSI C Standard for Fun, Pleasure, and Profit|
+28 |How Quiet is a "Quiet Change"?|
+32 |Some Light Relief—The Implementation-Defined Effects of Pragmas . . .|
+33 |2. It's Not a Bug, It's a Language Feature|
+34 |Why Language Features Matter—The Way the Fortran Bug Really Happened!|
+35 |Sins of Commission|
+43 |Sins of Mission|
+51 |Sins of Omission|
+59 |Some Light Relief—Some Features Really Are Bugs!|
+60 |3. Unscrambling Declarations in C|
+62 |Syntax Only a Compiler Could Love|
+63 |How a Declaration Is Formed|
+69 |The Precedence Rule|
+71 |Unscrambling C Declarations by Diagram|
+73 |typedef Can Be Your Friend|
+75 |Difference Between typedef int x[10] and #define x int[10]|
+75 |What typedef struct foo { ... foo; } foo; Means|
+78 |The Piece of Code that Understandeth All Parsing|
+80 |Some Light Relief—Software to Bite the Wax Tadpole|
+86 |4. The Shocking Truth: C Arrays and Pointers Are NOT the Same!|
+86 |Arrays Are NOT Pointers!|
+86 |Why Doesn't My Code Work?|
+87 |What's a Declaration? What's a Definition?|
+88 |How Arrays and Pointers Are Accessed|
+89 |Figure A. A Subscripted Array Reference|
+90 |Figure B. A Pointer Reference|
+90 |Figure C. A Subscripted Pointer Reference|
+91 |Match Your Declarations to the Definition|
+92 |Other Differences Between Arrays and Pointers|
+93 |Some Light Relief—Fun with Palindromes!|
+96 |5. Thinking of Linking|
+96 |Libraries, Linking, and Loading|
+100|The Benefits of Dynamic Linking|
+104|Five Special Secrets of Linking with Libraries|
+108|Watch Out for Interpositioning|
+113|Generating Linker Report Files|
+114|Some Light Relief—Look Who's Talking: Challenging the Turing Test|
+119|6. Poetry in Motion: Runtime Data Structures|
+120|a.out and a.out Folklore|
+121|Segments|
+124|What the OS Does with Your a.out|
+126|What the C Runtime Does with Your a.out|
+128|What Happens When a Function Gets Called: The Procedure Activation Record|
+131|The auto and static keywords|
+132|Threads of Control|
+132|setjmp and longjmp|
+135|The Stack Segment Under UNIX|
+135|The Stack Segment Under MS-DOS|
+135|Helpful C Tools|
+139|Some Light Relief—Programming Puzzles at CMU|
+140|For Advanced Students Only|
+141|7. Thanks for the Memory|
+142|The Intel 80x86 Family|
+145|The Intel 80x86 Memory Model and How It Got That Way|
+149|Virtual Memory|
+153|Cache Memory|
+156|The Data Segment and Heap|
+158|Memory Leaks|
+162|Bus Error, Take the Train|
+169|Some Light Relief—The Thing King and the Paging Game|
+173|8. Why Programmers Can't Tell Halloween from Christmas Day|
+174|The Potrzebie System of Weights and Measures|
+175|Making a Glyph from Bit Patterns|
+176|Types Changed While You Wait|
+179|Prototype Painfulness|
+183|Getting a Char Without a Carriage Return|
+188|Implementing a Finite State Machine in C|
+189|Software Is Harder than Hardware!|
+192|How and Why to Cast|
+194|Some Light Relief—The Inter national Obfuscated C Code Competition|
+205|9. More about Arrays|
+206|When an Array Is a Pointer|
+207|Why the Confusion?|
+211|Why C Treats Array Parameters as Pointers|
+215|Indexing a Slice|
+215|Arrays and Pointers Interchangeability Summary|
+215|C Has Multidimensional Arrays|
+216|But Every Other Language Calls Them "Arrays of Arrays"|
+218|How Multidimensional Arrays Break into Components|
+219|How Arrays Are Laid Out in Memory|
+220|How to Initialize Arrays|
+222|Some Light Relief—Hardware/Software Trade-Offs|
+224|10. More About Pointers|
+224|The Layout of Multidimensional Arrays|
+225|An Array of Pointers Is an "Iliffe Vector"|
+228|Using Pointers for Ragged Arrays|
+231|Passing a One-Dimensional Array to a Function|
+231|Using Pointers to Pass a Multidimensional Array to a Function|
+235|Using Pointers to Return an Array from a Function|
+237|Using Pointers to Create and Use Dynamic Arrays|
+242|Some Light Relief—The Limitations of Program Proofs|
+246|11. You Know C, So C++ is Easy!|
+246|Allez-OOP!|
+248|Abstraction—Extracting Out the Essential Characteristics of a Thing|
+249|Encapsulation—Grouping Together Related Types, Data, and Functions|
+250|Showing Some Class—Giving User-Defined Types the Same Privileges as Predefined Types|
+251|Availability|
+252|Declarations|
+254|How to Call a Method|
+256|Inheritance—Reusing Operations that Are Already Defined|
+260|Multiple Inheritance—Deriving from Two or More Base Classes|
+261|Overloading—Having One Name for the Same Action on Different Types|
+261|How C++ Does Operator Overloading|
+262|Input/Output in C++|
+263|Polymorphism—Runtime Binding|
+265|Explanation|
+266|How C++ Does Polymorphism|
+266|Fancy Pants Polymorphism|
+267|Other Corners of C++|
+269|If I Was Going There, I Wouldn't Start from Here|
+272|It May Be Crufty [4], but It's the Only Game in Town|
+275|Some Light Relief—The Dead Computers Society|
+277|Some Final Light Relief—Your Certificate of Merit!|
+277|Secrets of Programmer Job Interviews|
+278|Silicon Valley Programmer Interviews|
+278|How Can You Detect a Cycle in a Linked List?|
+280|What Are the Different C Increment Statements For?|
+282|How Is a Library Call Different from a System Call?|
+284|How Is a File Descriptor Different from a File Pointer?|
+284|Write Some Code to Determine if a Variable Is Signed or Not|
+285|What Is the Time Complexity of Printing the Values in a Binary Tree?|
+286|Give Me a String at Random from This File|
+286|Some Light Relief—How to Measure a Building with a Barometer|

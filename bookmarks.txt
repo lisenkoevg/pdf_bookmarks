@@ -1,3 +1,5 @@
+# https://www.oreilly.com/library/view/expert-c-programming/0131774298/
+
 Introduction
 The $20 Million Bug
 Convention
@@ -32,7 +34,7 @@ typedef Can Be Your Friend
 Difference Between typedef int x[10] and #define x int[10]
 What typedef struct foo { ... foo; } foo; Means
 The Piece of Code that Understandeth All Parsing
-Some Light Relief—Software to Bite the Wax Tadpole...
+Some Light Relief—Software to Bite the Wax Tadpole
 
 4. The Shocking Truth: C Arrays and Pointers Are NOT the Same!
 Arrays Are NOT Pointers!
@@ -88,7 +90,7 @@ Getting a Char Without a Carriage Return
 Implementing a Finite State Machine in C
 Software Is Harder than Hardware!
 How and Why to Cast
-Some Light Relief—The International Obfuscated C Code Competition
+Some Light Relief—The Inter national Obfuscated C Code Competition
 
 9. More about Arrays
 When an Array Is a Pointer
@@ -96,8 +98,8 @@ Why the Confusion?
 Why C Treats Array Parameters as Pointers
 Indexing a Slice
 Arrays and Pointers Interchangeability Summary
-C Has Multidimensional Arrays...
-...But Every Other Language Calls Them “Arrays of Arrays”
+C Has Multidimensional Arrays
+But Every Other Language Calls Them “Arrays of Arrays”
 How Multidimensional Arrays Break into Components
 How Arrays Are Laid Out in Memory
 How to Initialize Arrays
@@ -147,5 +149,3 @@ What Is the Time Complexity of Printing the Values in a Binary Tree?
 Give Me a String at Random from This File
 Some Light Relief—How to Measure a Building with a Barometer
 Further Reading
-Index
-Code Snippets

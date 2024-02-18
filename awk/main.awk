@@ -1,5 +1,5 @@
 BEGIN {
-  file="bookmarks.txt"
+  file=bookmarks_file
   bookmarks_count=0
   split("", list)
   split("", hash)
@@ -10,24 +10,24 @@ BEGIN {
 }
 
 {
-  if (NR > 10) nextfile
   for (k = last + 1; k <= bookmarks_count; k++) {
-    if (hash[list[k]] == "") {
-      printf "=== page: %s, search bookmark %d: %s\n", NR, k, list[k]
-      if (index($0, "\n" list[k] "\n") > 0) {
-        if (hash[list[k]] == "") {
-          hash[list[k]] = NR
-          last = k
-          printf "= found page: %s <== bookmark %d: %s\n", NR, k, list[k]
-        }
-      }
+    # if (list[k] == "Unscrambling C Declarations by Diagram")
+      # printf "%s %s %s\n", NR, list[k], k
+
+    # printf "=== page: %s, search bookmark %d: %s\n", NR, k, list[k]
+    if (match($0, "(^|\n|Chapter | |\xe2\x80\xa6)"escape(list[k])"(\n|\xe2\x80\xa6| )") > 0) {
+      hash[list[k]] = NR
+      last = k
+      # printf "= found page: %s <== bookmark %d: %s\n", NR, k, list[k]
+    } else {
+      next
     }
   }
 }
 
 END {
   for (k in list) {
-    printf "%5s '%s'\n", hash[list[k]], list[k]
+    printf "%-3s|%s|\n", hash[list[k]], list[k]
   }
 }
 
