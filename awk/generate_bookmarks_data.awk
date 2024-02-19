@@ -1,22 +1,14 @@
 BEGIN {
   FS = "|"
   level = 1
-  intro = 1
-  title = ""
+  not_preface = 0 
 }
 {
-  if ($0 ~ /^[0-9]+\./) {
-    level = 1
-    intro = 0
-  } else if (intro == 0) {
-    level = 2
-  }
-
-  title = $1
-  page = $2
+  set_bookmark_level($0)
 
   printf "BookmarkBegin\n"
-  printf "BookmarkTitle: %s\n", title
+  printf "BookmarkTitle: %s\n", $1
   printf "BookmarkLevel: %d\n", level
-  printf "BookmarkPageNumber: %d\n", page
+  printf "BookmarkPageNumber: %d\n", $2
 }
+

@@ -11,13 +11,8 @@ BEGIN {
 
 {
   for (k = last + 1; k <= bookmarks_count; k++) {
-    # if (list[k] == "Unscrambling C Declarations by Diagram")
-      # printf "%s %s %s\n", NR, list[k], k
-
-    # printf "=== page: %s, search bookmark %d: %s\n", NR, k, list[k]
-    # mnogotochie
-    if (match($0, "(^|\n|Chapter | |\xe2\x80\xa6)"escape(list[k])"(\n|\xe2\x80\xa6| )") > 0) {
-      sub(/\xe2\x80\x94/, "-", list[k]) # long dash
+    if (match($0, regex_to_search_bookmark_title_in_pdf(list[k])) > 0 ) {
+      modify_bookmark_title(list[k])
       hash[list[k]] = NR
       last = k
       # printf "= found page: %s <== bookmark %d: %s\n", NR, k, list[k]
