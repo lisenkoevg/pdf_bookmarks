@@ -1,0 +1,23 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CONFS	Makefile	/^CONFS := $(shell find conf -regextype awk -regex ".*(awk|sed)$$" | sed "s\/ \/\\?\/g")$/;"	m
+SOURCES	Makefile	/^SOURCES := $(wildcard *.sh awk\/*.awk)$/;"	m
+SOURCES_CONFS	Makefile	/^SOURCES_CONFS := $(SOURCES) $(CONFS)$/;"	m
+escape	awk/lib.awk	/^function escape(str) {$/;"	f
+gen_test_data	runtest.sh	/^function gen_test_data() {$/;"	f
+guess_bookmark	conf/dotguide/lib.awk	/^function guess_bookmark(page_content, output) {$/;"	f
+load_bookmarks	awk/extract_page_numbers_from_pdf.awk	/^function load_bookmarks(file,    k, i) {$/;"	f
+main	main.sh	/^function main() {$/;"	f
+main	runtest.sh	/^function main() {$/;"	f
+modify_bookmark_title	conf/Linden - Expert C Programming, 1994/lib.awk	/^function modify_bookmark_title(title) {$/;"	f
+prepare_bookmarks	main.sh	/^function prepare_bookmarks() {$/;"	f
+regex_to_search_bookmark_title_in_pdf	conf/Linden - Expert C Programming, 1994/lib.awk	/^function regex_to_search_bookmark_title_in_pdf(val) {$/;"	f
+rename_test_result_files	runtest.sh	/^function rename_test_result_files() {$/;"	f
+set_bookmark_level	conf/Linden - Expert C Programming, 1994/lib.awk	/^function set_bookmark_level(line) {$/;"	f
+set_bookmark_level	conf/dotguide/lib.awk	/^function set_bookmark_level(line) {$/;"	f
+usage	main.sh	/^function usage() {$/;"	f
+usage	runtest.sh	/^function usage() {$/;"	f

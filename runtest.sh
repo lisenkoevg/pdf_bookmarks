@@ -32,7 +32,8 @@ function main() {
   OLD_IFS=$IFS
   IFS=$'\n'
   [ -f "$test_dir/test.tar.xz" ] && {
-    tar xvf "$test_dir/test.tar.xz" -C "$test_dir"
+    echo Unpacking tests...
+    tar xf "$test_dir/test.tar.xz" -C "$test_dir"
     # tar --extract --file="$test_dir/test.tar.xz"  --directory="$test_dir" --verbose
   } || {
     \ls -1 "$test_dir" | sort -V | grep -E "\.(in|out)" |
@@ -64,7 +65,7 @@ function gen_test_data() {
   for i in $(seq "$@")
   do
     echo Export pages from 1 to $i...
-    pdftotext -f 1 -l $i -enc UTF-8 "$(cygpath -m "$PDF_FILE")" - | dos2unix > "$test_dir/gen/$i.in"
+    pdftotext -f 1 -l $i -enc UTF-8 -eol unix "$(cygpath -m "$PDF_FILE")" "$test_dir/gen/$i.in"
   done
 }
 
