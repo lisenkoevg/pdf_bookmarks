@@ -1,6 +1,6 @@
-#!/bin/bash -i
+#!/bin/bash
 
-
+. ~/lib.sh
 # script [ gen | rename ]
 # if no param - run test
 # PDF_FILE envvar must be set
