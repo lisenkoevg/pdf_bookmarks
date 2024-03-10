@@ -58,15 +58,14 @@ function main() {
   unset test_dir OLD_IFS base
 }
 
-# gen_test_data 1 2 10 - извлечь текст из pdf в файлы 1.in 3.in 5.in 7.in 9.in
-# с соответственно первой страницей, первыми тремя страница, первыми пятью и т.д.
+# gen_test_data 1 5 - извлечь текст из pdf c 1-й по 5-ю страницу
 function gen_test_data() {
+  from=${1:-1}
+  to=${2:-$from}
+  [ "$from" == "$to" ] && file=${from}.in || file=${from}_${to}.in
   mkdir -p "$test_dir/gen/"
-  for i in $(seq "$@")
-  do
-    echo Export pages from 1 to $i...
-    pdftotext -f 1 -l $i -enc UTF-8 -eol unix "$(cygpath -m "$PDF_FILE")" "$test_dir/gen/$i.in"
-  done
+  echo Export pages from $from to $to...
+  pdftotext -f $from -l $to -enc UTF-8 -eol unix "$(cygpath -m "$PDF_FILE")" "$test_dir/gen/$file"
 }
 
 

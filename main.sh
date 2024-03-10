@@ -40,7 +40,7 @@ function main() {
 
   echo Rebuilding pdf...
   pdftotext -enc UTF-8 -eol unix "$input" - |
-    eval "$eval_bookmark" |
+    eval "$eval_bookmark" | tee "$tmpDir/bookmarks.tmp" |
     awk -f "$conf_dir/lib.awk" -f awk/generate_bookmarks_data.awk > "$tmpDir/bookmarks_pdf.tmp"
 
   pdftk "$input" dump_data output - | dos2unix > "$tmpDir/dump_data.tmp"

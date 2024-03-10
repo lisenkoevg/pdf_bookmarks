@@ -32,7 +32,12 @@ BEGIN {
     split("", guessed)
     guess_bookmark($0, guessed)
     for (k in guessed) {
-      if (!guessed[k]) continue
+      if (!guessed[k])
+        continue
+      if (guessed[k] && bookmarks_count in list && guessed[k] == list[bookmarks_count]) {
+        continue
+      }
+
       list[++bookmarks_count] = guessed[k]
       hash[guessed[k]] = NR
     }
@@ -41,10 +46,10 @@ BEGIN {
 
 END {
   for (k in list) {
-  if (test=="test")
-    printf "%-3s|%s|\n", hash[list[k]], list[k]
-  else
-    printf "%s|%s\n", list[k], hash[list[k]]
+    if (test=="test")
+      printf "%-4s|%s|\n", hash[list[k]], list[k]
+    else
+      printf "%s|%s\n", list[k], hash[list[k]]
   }
 }
 
